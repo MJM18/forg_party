@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ContradorTemporal : MonoBehaviour
+public class ControladorTemporal : MonoBehaviour
 {
     public static float temporizadorInGame, temporizadorInGameIra;       //contador con el tiempo de 
     public float longitudHora, longitudHoraIra;   //cada cuanto se realizan las actualizaciones(cambios en los estats comida, aburrimiento...)

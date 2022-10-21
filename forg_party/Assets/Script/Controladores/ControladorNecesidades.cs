@@ -10,7 +10,7 @@ public class ControladorNecesidades : MonoBehaviour
         this.Comida = comida;
         this.Aburrimiento = aburrimiento;
         this.Energia = energia;
-        this.Ira = Ira;
+        this.Ira = ira;
     }
     
     private void Update() {
