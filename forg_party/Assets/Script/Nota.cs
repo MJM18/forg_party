@@ -5,19 +5,31 @@ using UnityEngine;
 public class Nota : MonoBehaviour
 {
     Rigidbody2D rb;
+    public float velocidad;
+    AudioSource musica;
+
     private void Awake()
     {
         rb = this.GetComponent<Rigidbody2D>();
     }
-    // Start is called before the first frame update
+
+
     void Start()
     {
-        
+        rb.velocity = new Vector2(0, -velocidad);
+        musica = FindObjectOfType<AudioSource>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if (this.transform.position.y < -6)
+        {
+            Debug.Log("HAS FALLADO");
+            musica.mute = true;
+            Time.timeScale = 0;
+            //Destroy(this.gameObject);
+        }
+
     }
 }
