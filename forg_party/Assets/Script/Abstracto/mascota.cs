@@ -2,15 +2,15 @@ using System;
 
 public class mascota  
 {
-    public DateTime ultimaVezAlimentado, ultimaVezDormido, ultimaVezEntretenido, ultimaVezComplacido;
+    public DateTime ultimaVezAlimentado, ultimaVezDormido, ultimaVezEntretenido, ultimaVezCalmado;
     public int Comida, Aburrimiento, Energia, Ira;
 
-    public mascota(DateTime ultimaVezAlimentado, DateTime ultimaVezDormido, DateTime ultimaVezEntretenido, DateTime ultimaVezComplacido, int comida, int aburrimiento, int energia, int ira)
+    public mascota(DateTime UltimaVezAlimentado, DateTime UltimaVezDormido, DateTime UltimaVezEntretenido, DateTime UltimaVezCalmado, int comida, int aburrimiento, int energia, int ira)
     {
-        this.ultimaVezAlimentado = ultimaVezAlimentado;
-        this.ultimaVezDormido = ultimaVezDormido;
-        this.ultimaVezEntretenido = ultimaVezEntretenido;
-        this.ultimaVezComplacido = ultimaVezComplacido;
+        this.ultimaVezAlimentado = UltimaVezAlimentado;
+        this.ultimaVezDormido = UltimaVezDormido;
+        this.ultimaVezEntretenido = UltimaVezEntretenido;
+        this.ultimaVezCalmado = UltimaVezCalmado;
 
         int Comida = comida;
         int Aburrimiento = aburrimiento;

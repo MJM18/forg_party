@@ -2,23 +2,35 @@ using UnityEngine;
 
 public class ControladorNecesidades : MonoBehaviour
 {
-    public int Comida, Aburrimiento, Energia, Ira; //cantidad de los estats
+    public int Comida, Aburrimiento , Energia , Ira; //cantidad de los estats
     public int comidaTickRate, aburrimientoTickRate, energiaTickRate, iraTickRate; //cuanto cambiar los estats en cada una de sus actualizaciones
 
-    public void inicializar(int comida, int aburrimiento, int energia, int ira) 
+    private void Awake()
+    {
+        inicializar(100, 100, 100 ,100 ,10 , 10, 10, 10);
+    }
+
+    public void inicializar(int comida, int aburrimiento, int energia, int ira,
+        int ComidaTickRate, int AburrimientoTickRate, int EnergiaTickRate, int IraTickRate) 
     {
         this.Comida = comida;
         this.Aburrimiento = aburrimiento;
         this.Energia = energia;
         this.Ira = ira;
+        this.comidaTickRate = ComidaTickRate;
+        this.aburrimientoTickRate = AburrimientoTickRate;
+        this.energiaTickRate = EnergiaTickRate;
+        this.iraTickRate = IraTickRate;
+        PetUIcontroller.instance.UpdateImagenes(Comida, Aburrimiento, Energia);
     }
-    
+
     private void Update() {
         if (ControladorTemporal.temporizadorInGame <= 0)
         {
             cambiarAburrimiento(-aburrimientoTickRate);
             cambiarComida(-comidaTickRate);
             cambiarEnergia(-energiaTickRate);
+            PetUIcontroller.instance.UpdateImagenes(Comida, Aburrimiento, Energia);
         }
         if (ControladorTemporal.temporizadorInGameIra <= 0)
             cambiarIra(-iraTickRate);
