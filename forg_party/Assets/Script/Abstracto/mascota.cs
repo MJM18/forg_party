@@ -1,20 +1,19 @@
 using System;
 
-public class mascota  
+public class Mascota  
 {
-    public DateTime ultimaVezAlimentado, ultimaVezDormido, ultimaVezEntretenido, ultimaVezCalmado;
-    public int Comida, Aburrimiento, Energia, Ira;
+    public DateTime ultimaVezAlimentado, ultimaVezDormido, ultimaVezEntretenido;
+    public int Comida, Aburrimiento, Energia;
 
-    public mascota(DateTime UltimaVezAlimentado, DateTime UltimaVezDormido, DateTime UltimaVezEntretenido, DateTime UltimaVezCalmado, int comida, int aburrimiento, int energia, int ira)
+    public Mascota(DateTime UltimaVezAlimentado, DateTime UltimaVezDormido, DateTime UltimaVezEntretenido, int comida, int aburrimiento, int energia)
     {
         this.ultimaVezAlimentado = UltimaVezAlimentado;
         this.ultimaVezDormido = UltimaVezDormido;
         this.ultimaVezEntretenido = UltimaVezEntretenido;
-        this.ultimaVezCalmado = UltimaVezCalmado;
 
         int Comida = comida;
         int Aburrimiento = aburrimiento;
         int Energia = energia;
-        int Ira = ira;
     }
+
 }

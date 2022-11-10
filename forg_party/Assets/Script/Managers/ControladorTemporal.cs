@@ -2,8 +2,18 @@ using UnityEngine;
 
 public class ControladorTemporal : MonoBehaviour
 {
-    public static float temporizadorInGame, temporizadorInGameIra;       //contador con el tiempo de 
-    public float longitudHora, longitudHoraIra;   //cada cuanto se realizan las actualizaciones(cambios en los estats comida, aburrimiento...)
+    public static float temporizadorInGame;
+    public float longitudHora;   //cada cuanto se realizan las actualizaciones(cambios en los estats comida, aburrimiento...)
+    public static ControladorTemporal instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else Debug.LogWarning("More Than one ControladorTemporal in the scene");
+    }
 
     private void Update() 
     {
@@ -15,13 +25,5 @@ public class ControladorTemporal : MonoBehaviour
             temporizadorInGame -= Time.deltaTime;
         }
 
-        if (temporizadorInGameIra <= 0)
-        {
-            temporizadorInGameIra = longitudHoraIra;
-        }
-        else
-        {
-            temporizadorInGameIra -= Time.deltaTime;
-        }
     }
 }

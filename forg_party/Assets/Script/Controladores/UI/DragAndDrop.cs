@@ -30,8 +30,8 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     {
         transform.SetParent(parentAfterDrag);
         string nameOfBlock = gameObject.name;
-        if(nameOfBlock == "comida1") ControladorNecesidades.instance.cambiarComida(5);
-        else if(nameOfBlock =="comida2") ControladorNecesidades.instance.cambiarComida(10);
+        if(nameOfBlock == "comida1")      ControladorNecesidades.instance.cambiarComida(5);
+        else if(nameOfBlock =="comida2")  ControladorNecesidades.instance.cambiarComida(10);
         else if(nameOfBlock == "comida3") ControladorNecesidades.instance.cambiarComida(20);
         else if(nameOfBlock == "comida4") ControladorNecesidades.instance.cambiarComida(30);
     }
