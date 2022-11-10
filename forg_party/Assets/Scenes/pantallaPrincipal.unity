@@ -450,6 +450,7 @@ GameObject:
   - component: {fileID: 219494826}
   - component: {fileID: 219494825}
   - component: {fileID: 219494824}
+  - component: {fileID: 219494827}
   m_Layer: 5
   m_Name: JuegoMosca
   m_TagString: Untagged
@@ -533,6 +534,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 219494827}
+        m_TargetAssemblyTypeName: cambiarScene, Assembly-CSharp
+        m_MethodName: MoveToScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &219494825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,6 +584,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219494822}
   m_CullTransparentMesh: 1
+--- !u!114 &219494827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219494822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9eb4017c54bf1545bd7b4aed1f1bbd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &269380131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,7 +1384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c207bdfc32e8da94193c7781963e93ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3a85f50fa900cc45b31f658940b37b3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1998,7 +2023,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -153.08713, y: 458.65576}
+  m_AnchoredPosition: {x: -100, y: 509}
   m_SizeDelta: {x: 88.1162, y: 91.0872}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &669507395
@@ -2014,14 +2039,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a2f0402ac5b96534dbf7abc14a5c04f9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2774,7 +2799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -313.02902, y: 458.65576}
+  m_AnchoredPosition: {x: -271, y: 512}
   m_SizeDelta: {x: 88.1162, y: 91.0872}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &768958023
@@ -2790,14 +2815,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b17081afc9d07bc4a803d4d83132fe38, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3075,7 +3100,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25.912872, y: 458.65576}
+  m_AnchoredPosition: {x: 79, y: 512}
   m_SizeDelta: {x: 88.1162, y: 91.0872}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &913469528
@@ -3091,14 +3116,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c49a327a293318449b0b83b17e6c4b4a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4962,6 +4987,7 @@ GameObject:
   - component: {fileID: 1384428892}
   - component: {fileID: 1384428891}
   - component: {fileID: 1384428890}
+  - component: {fileID: 1384428893}
   m_Layer: 5
   m_Name: JuegoPiano
   m_TagString: Untagged
@@ -5045,6 +5071,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1384428893}
+        m_TargetAssemblyTypeName: cambiarScene, Assembly-CSharp
+        m_MethodName: MoveToScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1384428891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5083,6 +5121,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384428888}
   m_CullTransparentMesh: 1
+--- !u!114 &1384428893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384428888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9eb4017c54bf1545bd7b4aed1f1bbd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1429365483
 GameObject:
   m_ObjectHideFlags: 0
@@ -5455,7 +5505,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1085337695}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -6313,8 +6363,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -193.30487, y: 5.2872314}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: -189, y: 0}
+  m_SizeDelta: {x: 244.6022, y: 246.9497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1637166294
 MonoBehaviour:
@@ -6372,7 +6422,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1085337695}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -6397,15 +6447,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6320754, g: 0.31400484, b: 0.19975968, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 728e86f7be5b3ae439818426829993e3, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -8843,7 +8893,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c207bdfc32e8da94193c7781963e93ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09e179c3f1a843b47a10d738cc071d69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8934,7 +8984,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 45e4e5af7e97a454cb0b8305536bcefe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8e752770f7b6a3844bf51777dbd68315, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
