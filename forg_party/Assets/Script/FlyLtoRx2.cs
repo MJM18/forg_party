@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyLtoR : MonoBehaviour
+public class FlyLtoRx2 : MonoBehaviour
 {
-    // Start is called before the first frame update
     float initialY;
     float randomValue;
     private GameObject AliveAnt;
@@ -14,24 +13,22 @@ public class FlyLtoR : MonoBehaviour
     void Start()
     {
         initialY = Random.Range(-3.5f, 3.5f);
-        randomValue = Random.Range(-3.5f, 3.5f);
-        
+        randomValue = Random.Range(-3.5f, 4.5f);
+
     }
 
     // Update is called once per frame
     void Update()
     {
         //Quisiera ser una mosca, para pararme en tu pieeeeeel (JV)
-        transform.position = new Vector3(transform.position.x, Mathf.Sin((Time.time + randomValue*10) * 10) / 5, transform.position.z);
-        transform.Translate(Time.deltaTime, initialY, 0);
+        transform.position = new Vector3(transform.position.x, Mathf.Sin((Time.time + randomValue) * 10) / 5, transform.position.z);
+        transform.Translate(Time.deltaTime * 2, initialY, 0);
         detectTouch();
-        if(transform.position.x >= 4)
+        if (transform.position.x >= 4)
         {
             Destroy(this, 0f);
             Marcador.vidas--;
         }
-        
-        
     }
 
     void detectTouch()
@@ -46,7 +43,6 @@ public class FlyLtoR : MonoBehaviour
                 Debug.Log(hit.transform.name);
                 if (hit.collider != null)
                 {
-
                     GameObject touchedObject = hit.transform.gameObject;
                     Destroy(touchedObject, 0);
                     Marcador.score++;
