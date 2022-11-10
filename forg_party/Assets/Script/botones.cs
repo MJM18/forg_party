@@ -13,6 +13,9 @@ public class botones : MonoBehaviour
     public bool createMode;                     //esta variable es para crear la notas en ejecucion...
     public KeyCode key;                         //para facilitar la creacion de notas en ejecucion -> teclas A, S, D, F
 
+    public int cont;                            //contador notas acertadas
+    GameObject gameManager;
+
 
     private void Awake()
     {
@@ -22,11 +25,13 @@ public class botones : MonoBehaviour
     void Start()
     {
         old = sr.color;
+        gameManager = GameObject.Find("GameManager");
     }
 
 
     void Update()
     {
+        /*
         //para la creacion de las notas segun el ritmo de la musica, es manual
         if(createMode)
         {
@@ -42,9 +47,41 @@ public class botones : MonoBehaviour
             //si detecta colision y se ha pulsado la tecla vinculada a ese boton borra la nota
             if (Input.GetKeyDown(key) & activo)
             {
+                cont++;
                 Destroy(nota);
             }
 
+        }
+        */
+        if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
+            RaycastHit hit;
+
+            if(Physics.Raycast(ray, out hit))
+            {
+                Debug.Log("FUNCIONA");
+                if (hit.collider != null)
+                {
+                    
+                    switch (hit.collider.name) 
+                    {
+                        case "Boton_1": StartCoroutine("Boton_Down");
+                                        if(activo) { cont++; Destroy(nota); }
+                            break;
+                        case "Boton_2": StartCoroutine("Boton_Down");
+                                        if (activo) { cont++; Destroy(nota);}
+                            break;
+                        case "Boton_3": StartCoroutine("Boton_Down");
+                                        if (activo) { cont++; Destroy(nota); }
+                            break;
+                        case "Boton_4": StartCoroutine("Boton_Down");
+                                        if (activo) { cont++; Destroy(nota); }
+                            break;
+                        default: break;
+                    }
+                }
+            }
         }
         
     }
@@ -62,6 +99,7 @@ public class botones : MonoBehaviour
 
         if(collision.gameObject.tag == "Nota_Final") 
         {
+            gameManager.GetComponent<GameManager>().Fin();
         }
     }
 
@@ -69,6 +107,7 @@ public class botones : MonoBehaviour
     {
         activo = false;
     }
+
 
     //corrutina encargada de cambiar el color de los botones al pulsarlos...
     IEnumerator Boton_Down()
