@@ -6,12 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/pantallaPrincipal.unity
-    guid: fe12a45d76ad54eda86e5259ef650c72
-  - enabled: 1
-    path: Assets/Scenes/Minijuego_2.unity
-    guid: 7e38c9e1ba82c4d41a16a69424824280
-  - enabled: 1
-    path: Assets/Scenes/FlyClicker.unity
-    guid: 6e38a05b83a84a2418c48e8d56b5b8a2
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

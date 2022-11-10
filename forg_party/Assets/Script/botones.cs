@@ -53,32 +53,39 @@ public class botones : MonoBehaviour
 
         }
         */
+        if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
+            RaycastHit hit;
+
+            if(Physics.Raycast(ray, out hit))
+            {
+                Debug.Log("FUNCIONA");
+                if (hit.collider != null)
+                {
+                    
+                    switch (hit.collider.name) 
+                    {
+                        case "Boton_1": StartCoroutine("Boton_Down");
+                                        if(activo) { cont++; Destroy(nota); }
+                            break;
+                        case "Boton_2": StartCoroutine("Boton_Down");
+                                        if (activo) { cont++; Destroy(nota);}
+                            break;
+                        case "Boton_3": StartCoroutine("Boton_Down");
+                                        if (activo) { cont++; Destroy(nota); }
+                            break;
+                        case "Boton_4": StartCoroutine("Boton_Down");
+                                        if (activo) { cont++; Destroy(nota); }
+                            break;
+                        default: break;
+                    }
+                }
+            }
+        }
         
     }
 
-    private void OnMouseDown()
-    {
-        switch (this.gameObject.name)
-        {
-            case "Boton_1":
-                StartCoroutine("Boton_Down");
-                if (activo) { cont++; Destroy(nota); }
-                break;
-            case "Boton_2":
-                StartCoroutine("Boton_Down");
-                if (activo) { cont++; Destroy(nota); }
-                break;
-            case "Boton_3":
-                StartCoroutine("Boton_Down");
-                if (activo) { cont++; Destroy(nota); }
-                break;
-            case "Boton_4":
-                StartCoroutine("Boton_Down");
-                if (activo) { cont++; Destroy(nota); }
-                break;
-            default: break;
-        }
-    }
 
     //el que realmente detecta el contacto entre colliders
     private void OnTriggerEnter2D(Collider2D collision)

@@ -23,6 +23,14 @@ public class Nota : MonoBehaviour
 
     void Update()
     {
+        //si te saltas una nota se para el juego -> habría que añadir algo para que no sea muy soso
+        if (this.transform.position.y < -6)
+        {
+            //Debug.Log("HAS FALLADO");
+            //musica.mute = true;
+            //Time.timeScale = 0;
+           // Destroy(this.gameObject);
+        }
 
     }
 }
